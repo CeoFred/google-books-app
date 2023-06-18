@@ -19,9 +19,9 @@ export default function MetaTag({ title, description, url }) {
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content="" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@quizardHQ" />
-      <meta property="og:url" content="https://quizardhq.com" />
-      <meta name="twitter:creator" content="@quizardHQ" />
+      <meta name="twitter:site" content="@geebook" />
+      <meta property="og:url" content="" />
+      <meta name="twitter:creator" content="@geebook" />
 
       {/* Others */}
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,10 +29,7 @@ export default function MetaTag({ title, description, url }) {
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta charSet="utf-8" />
       <meta property="og:type" content="website" />
-      <meta
-        property="og:image:alt"
-        content="Quizard: The spellbinding game-based learning platform that makes every quiz a magical adventure!"
-      />
+      <meta property="og:image:alt" content="" />
       <meta property="og:locale" content="en_US" />
       <meta name="robots" content="index,follow"></meta>
     </Head>
