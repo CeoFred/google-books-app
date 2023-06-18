@@ -26,6 +26,7 @@ export default function App() {
   }
   const handleSearch = (e) => {
     e.preventDefault();
+    setError(null);
     setIsSearching(true);
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?maxResults=5&q=${encodeURIComponent(
@@ -86,6 +87,7 @@ export default function App() {
             placeholder="Start typing.."
             value={searchTerm}
             onChange={handleInputChange}
+            required
           />
           <Button
             className="bg-[#00522a] hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-r flex items-center"
