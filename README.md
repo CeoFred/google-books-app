@@ -28,13 +28,13 @@ Before running the application, make sure you have the following installed:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/nextjs-book-search-app.git
+   git clone https://github.com/CeoFred/google-books-app.git
    ```
 
 2. Navigate to the project directory:
 
    ```shell
-   cd nextjs-book-search-app
+   cd google-books-app
    ```
 
 3. Create a new environment variable:
