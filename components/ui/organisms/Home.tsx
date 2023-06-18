@@ -28,7 +28,7 @@ export default function App() {
     e.preventDefault();
     setError(null);
     setIsSearching(true);
-    const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY;
     const apiUrl = `https://www.googleapis.com/books/v1/volumes?maxResults=5&q=${encodeURIComponent(
       searchTerm
     )}&key=${apiKey}`;

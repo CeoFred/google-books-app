@@ -2,8 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 echo '🏗️👷 Running checks on your code before committing' 🔍🧐
-
-yarn format .
 npx lint-staged
 yarn build
 

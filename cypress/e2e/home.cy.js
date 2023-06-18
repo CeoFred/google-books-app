@@ -25,7 +25,7 @@ describe('App', () => {
   });
 
 it('should hide search results when user clicks outside', () => {
-  cy.visit('/'); // Assuming the component is rendered at the root URL
+  cy.visit('/');
 
   // Type a search term and wait for the search results
   cy.get('input[type="text"]').type('Harry Potter');

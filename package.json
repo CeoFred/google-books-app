@@ -10,8 +10,7 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "format:check": "prettier --check",
-    "test": "echo tested",
-    "cypress:open": "cypress open"
+    "test": "cypress open"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
