@@ -4,7 +4,7 @@ export interface BookState {
   books: Book[];
 }
 
-interface Book {
+export interface Book {
   author: string;
   title: string;
   id: string;

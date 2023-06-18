@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    GOOGLE_BOOKS_API_KEY: 'AIzaSyCX7OfrgfnGSg-2WkVXToLrBLSzcASJ0xE',
+    GOOGLE_BOOKS_API_KEY: 'AIzaSyAsyj76ZJVBDv8GSKZyLQcwKprD-5iEMw8',
   },
 };
 

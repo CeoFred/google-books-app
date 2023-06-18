@@ -8,6 +8,7 @@ interface ButtonProps {
   isLoading?: boolean;
   onClick?: React.EventHandler<React.SyntheticEvent>;
   isDisabled?: boolean;
+  title?: string;
   // other props go here
 }
 
@@ -18,6 +19,7 @@ export default function Button({
   isLoading = false,
   onClick = () => {},
   isDisabled = false,
+  title = '',
 }: ButtonProps) {
   return (
     <button
@@ -25,6 +27,7 @@ export default function Button({
       onClick={onClick}
       type={isSubmit ? 'submit' : 'button'}
       className={`${className} flex justify-center item-center`}
+      title={title}
     >
       {isLoading ? <SpinnerIcon /> : children}
     </button>
@@ -38,4 +41,5 @@ Button.defaultProps = {
   isLoading: false,
   onClick: () => {},
   isDisabled: false,
+  title: '',
 };

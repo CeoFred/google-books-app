@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import WaitlistReducer from './reducer/waitlist.slice';
+import BooksReducer from './reducer/book.slice';
 
 const store = configureStore({
   reducer: {
-    waitlist: WaitlistReducer,
+    books: BooksReducer,
   },
   devTools: process.env.NODE_ENV !== 'production',
 });
