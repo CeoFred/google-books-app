@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { GitHubIcon, MenuIcon, QuizardFullLogo } from '@/components/assets';
-import Button from '@/components/ui/atoms/Button';
+import { GitHubIcon, MenuIcon } from '@/components/assets';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
@@ -17,11 +16,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex justify-between items-center font-medium">
         {/* Logo */}
         <Link href="/" className="h-6 lg:h-max cursor-pointer">
-          <Image
-            src={QuizardFullLogo}
-            alt="Quizard logo"
-            className="h-full w-max"
-          />
+          Gee-Bookie
         </Link>
 
         {/* Nav */}
@@ -72,50 +67,15 @@ export default function Header() {
                       }
                     }}
                     onClick={handleToggle}
-                    href="/#about-us"
+                    href="/books"
                   >
-                    About Us
+                    My Book
                   </Link>
                 </li>
-                <li className="my-5 ">
-                  <Link
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleToggle();
-                      }
-                    }}
-                    onClick={handleToggle}
-                    href="/#features"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li className="my-5">
-                  <Link
-                    onKeyPress={(e) => {
-                      if (e.key === 'Enter') {
-                        handleToggle();
-                      }
-                    }}
-                    onClick={handleToggle}
-                    href="/#faq"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#join_waitlist" onClick={handleToggle}>
-                    <Button
-                      isSubmit
-                      className="primary-btn text-[#00391B] font-normal text-lg"
-                    >
-                      JOIN THE WAITLIST
-                    </Button>
-                  </Link>
-                </li>
+
                 <li className="w-[100%]">
                   <a
-                    href="https://github.com/quizardhq"
+                    href="https://github.com/CeoFred/google-books-app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -142,32 +102,14 @@ export default function Header() {
 
         <nav className="hidden lg:flex font-medium space-x-5 items-center text-[#00210E] cursor-pointer">
           <Link
-            href="/#about-us"
+            href="/books"
             className="hover:underline hover:underline-offset-8"
           >
-            About Us
+            My Books
           </Link>
-          <Link
-            href="/#features"
-            className="hover:underline hover:underline-offset-8"
-          >
-            Features
-          </Link>
-          <Link
-            href="/#faq"
-            className="hover:underline hover:underline-offset-8"
-          >
-            FAQ
-          </Link>
-          <div>
-            <Link href="/#join_waitlist">
-              <Button className="primary-btn text-[#00391B] font-medium">
-                JOIN THE WAITLIST
-              </Button>
-            </Link>
-          </div>
+
           <a
-            href="https://github.com/quizardhq"
+            href="https://github.com/CeoFred/google-books-app"
             target="_blank"
             rel="noopener noreferrer"
           >

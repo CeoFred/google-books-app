@@ -13,6 +13,7 @@
     "react/react-in-jsx-scope": "off",
     "react/self-closing-comp": "off",
     "func-names": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "react/button-has-type": "off"
   }
 }

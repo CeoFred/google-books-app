@@ -2,10 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    QUIZARD_USERS_API:
-      process.env.NODE_ENV === 'development'
-        ? 'http://localhost:3006/api/v1'
-        : 'https://api.quizardhq.com/api/v1',
+    GOOGLE_BOOKS_API_KEY: 'AIzaSyCX7OfrgfnGSg-2WkVXToLrBLSzcASJ0xE',
   },
 };
 
