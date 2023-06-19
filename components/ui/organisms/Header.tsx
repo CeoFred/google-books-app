@@ -5,7 +5,7 @@ import { GitHubIcon, MenuIcon } from '@/components/assets';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);

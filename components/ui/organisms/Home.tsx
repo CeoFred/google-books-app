@@ -7,24 +7,29 @@ import { addBook, Book, BookState } from '../../../redux/reducer/book.slice';
 export default function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Book[]>([]);
-  const [typingTimeout, setTypingTimeout] = useState<any>(null);
+  // eslint-disable-next-line no-undef
+  const [typingTimeout, setTypingTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
   const [isSearching, setIsSearching] = useState<boolean>(false);
-  const [errorMessage, setError] = useState(null);
-  const searchContainerRef = useRef(null);
+  const [errorMessage, setError] = useState<string | null>(null);
+  const searchContainerRef = useRef<HTMLDivElement | null>(null);
 
   const booksState = useAppSelector<BookState>((state) => state.books);
 
   const dispatch = useAppDispatch();
 
-  function handleClickOutside(event) {
+  function handleClickOutside(event: MouseEvent) {
     if (
       searchContainerRef.current &&
-      !searchContainerRef.current.contains(event.target)
+      !searchContainerRef.current.contains(event.target as Node)
     ) {
       setSearchResults([]);
     }
   }
-  const handleSearch = (e) => {
+  const handleSearch = (
+    e: React.FormEvent<HTMLFormElement> | React.ChangeEvent<HTMLInputElement>
+  ) => {
     e.preventDefault();
     setError(null);
     setIsSearching(true);
@@ -53,7 +58,7 @@ export default function App() {
       .finally(() => setIsSearching(false));
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setSearchTerm(value);
     clearTimeout(typingTimeout);

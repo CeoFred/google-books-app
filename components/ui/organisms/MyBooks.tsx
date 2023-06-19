@@ -5,7 +5,7 @@ export default function Books() {
   const booksState = useAppSelector<BookState>((state) => state.books);
 
   return (
-    <div className="flex flex-col items-center justify-center px-6 h-full">
+    <div className="flex flex-col items-center px-6 h-[80vh]">
       <h1 className="text-2xl font-bold mb-4 mt-10">My Reading List</h1>
       {booksState.books.length > 0 ? (
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
